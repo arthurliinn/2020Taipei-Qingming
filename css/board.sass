@@ -1,0 +1,279 @@
+$background_color : #E4EEED
+$cal_color: #dadada
+$result_color: #808080
+$line_color: #808080
+$btn_color: #646b79
+$main_button: #2E983A
+$title_color: #2E983A
+$smaller_title_color: #DE7996
+$text_color: #00A58E
+$smaller_btn_color: #EB8D25
+$ground_color: #EFEEED
+
+
+#board-container
+  width: 100vw
+  height: 100vh
+  background-color: $ground_color
+  background-image: url(../image/mainPage_bg.png)
+  background-size: 100%
+  background-repeat: no-repeat
+  background-position: center center
+#LOGO
+  width: 150px
+  max-width: 300px
+  margin: unset
+  left: 5%
+  z-index: 20
+#title
+  position: absolute
+  width: 30%
+  top: 10%
+  margin: 0 auto
+  left: 0
+  right: 0
+  z-index: 20
+  img
+    width: 100%
+
+#gofill_btn
+  position: absolute
+  display: inline-block
+  right: 5%
+  top: 20%
+  border: solid 3px $main_button
+  border-radius: 20px
+  background-color: #fff
+  padding:  10px
+  width: 250px
+  z-index: 20
+  &:hover
+    background-color: $main_button
+
+  a
+    width: 100%
+    display: inline-block
+    border: solid 1px $main_button
+    border-radius: 20px
+    text-decoration: none
+    text-align: center
+    color: $main_button
+    padding: 10px
+    font-size: 30px
+#gofill_btn:hover a
+  color: #ffffff
+  border-color: #ffffff
+  
+
+#len
+  width: 0% //10%
+  right: 25%
+  top: 5%
+  transition-delay: 1s
+#a-niou
+  left: 25%
+#leaf-left
+  width: 15%
+  left: 15%
+#leaf-right
+  width: 15%
+  right: 3%
+#boards_container
+  margin-left: auto
+  margin-right: auto
+  width: 100%
+  display: flex
+  overflow: hidden
+.board
+  width: 300px
+  min-width: 300px
+  height: 85%
+  max-height: 375px
+  background-color: #fff
+  border: solid 1px $line_color
+  border-radius: 20px
+  padding: 25px
+  margin-right: 10px
+  user-select: none
+// .board-first
+//   opacity: 0
+.board_header
+  margin-bottom: 0px
+.board_paragraph
+  height: 80%
+  line-height: 30px
+.board_footer
+  text-align: right
+
+#message
+  width: 50%
+  max-height: 50%
+  display: flex
+  flex-wrap: wrap
+  margin: 0 auto
+  transform: translateY(-100px)
+.message_box
+  width: 100%
+  margin-top: 25px
+  span
+    font-size: 30px
+    font-weight: 500
+    margin-right: 10px
+  select
+    font-size: 25px
+#text_limit_container
+  width: 100%
+#to_who
+  display: inline-block
+  width: 85%
+  height: 25px
+  padding: 20px
+  padding-left: 5px
+  margin: 0 auto
+  font-size: 18px
+  
+  
+#message_content
+  display: inline-block
+  width: 85%
+  height: 200px
+  resize: none
+  vertical-align: top
+  font-size: 18px
+  padding-left: 5px
+  margin: 0 auto
+#text_limit
+  text-align: right
+  margin-right: 50px
+  color: #303030
+  font-weight: bold
+#from_who
+  display: inline-block
+  width: 85%
+  height: 25px
+  padding: 20px
+  padding-left: 5px
+  margin: 0 auto
+  font-size: 18px
+  
+#submit_btn_container
+  border: solid 3px $main_button
+  padding: 5px
+  margin: 0 auto
+  margin-top: 20px
+  background-color: #fff
+  border-radius: 10px
+#submit_message
+  background-color: #fff
+  box-shadow: none
+  border: solid 1px $main_button
+  padding: 0px 15px
+  border-radius: 10px 
+  font-size: 25px
+  cursor: pointer
+  &:active
+    background-color: $main_button
+    color: #ffffff
+    border-color: #ffffff
+@media screen and (min-width:1080px) and (max-width: 1080px) 
+  #leaf-right
+    width: 30%
+  #leaf-left
+    width: 30%
+  #a-niou
+    top: 20%
+    left: 8%
+  #len
+    right: 10%
+    top: 20%
+    z-index: 20
+  #title
+    width: 50%
+    top: 22%
+  #LOGO
+    width: 200px
+  #gofill_btn
+    top: unset
+    bottom: 25%
+  #message
+    top: 20%
+
+  #board-container
+    background-image: url(../image/bg_1080x1920p.png)
+    background-size: cover
+  #boards_container
+    top: 15%
+  .board
+    min-width: unset
+    max-height: unset
+  
+
+
+@media screen and ( max-width: 1024px )
+  #LOGO
+    top: 0
+  #board-container
+    background-color: $ground_color
+    background-position: top
+    background-size: 100% 67%
+  #gofill_btn
+    top: 1%
+  #boards_container
+    display: flex
+    overflow: auto
+    height: 80%
+    flex-wrap: wrap
+  .board
+    margin: 20px auto
+  #message
+    margin-top: 0
+    top: 50%
+    transform: translateY(-100%)
+  #to_who,#message_content,#from_who
+    width: 80%
+@media screen and ( max-width: 768px )
+  #title
+    top: 20%
+  .message_box
+    span
+      font-size: 25px
+  #to_who,#message_content,#from_who
+    display: block
+    margin: 0 auto
+  #gofill_btn
+    top: 3%
+  #len
+    top: 20%  
+
+
+@media screen and ( max-width: 480px )
+  #message
+    width: 80%
+  #title
+    top: 30%
+    left: unset
+  #a-niou
+    left: 30%
+    top: 35%
+  #message_content
+    height: unset
+  #len
+    top: 20%
+  #gofill_btn
+    top: 0
+    width: 180px
+@media screen and ( max-width: 360px )
+  #title
+    z-index: 21
+
+@media screen and ( max-width: 320px )
+  #a-niou
+    top: 45%
+  #gofill_btn
+    width: 120px
+    a
+      font-size: 15px
+    
+
+
+  

@@ -1,0 +1,385 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:500,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: 'Noto Sans TC', sans-serif,'微軟正黑體';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: #E4EEED;
+}
+
+#main_container, #main_container_C {
+  margin: 0 auto;
+  height: 100vh;
+  max-width: 1920px;
+  background-image: url("../image/background.png");
+  background-color: #EFEEED;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50% 70%;
+}
+
+#carbon_container {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+}
+
+#carbon_container img {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+}
+
+#co2_emission {
+  width: 450px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 30px;
+  background-color: #FFA96E;
+}
+
+#co2_emission span {
+  font-size: 55px;
+  top: 35px;
+  margin: 0 5px;
+  left: 30px;
+}
+
+.carbon_emission_num {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ABABAB), color-stop(#ffffff), to(#ABABAB));
+  background: linear-gradient(to right bottom, #ABABAB, #ffffff, #ABABAB);
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+#main_title {
+  width: 35%;
+  margin: 0 auto;
+}
+
+#main_title img {
+  width: 100%;
+}
+
+#carbon_features_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 70vh;
+}
+
+#calculator_container {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  border-right: solid 3px #9B6357;
+}
+
+.carbon_text {
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+}
+
+.carbon_text p {
+  line-height: 20px;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.carbon_text span {
+  right: 0;
+}
+
+#carbon_emission_calculator {
+  display: block;
+  width: 250px;
+  max-width: 300px;
+  height: 400px;
+  min-height: 400px;
+  top: calc(50% - 325px);
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  padding-top: 10px;
+  bottom: 2%;
+  background-color: #dadada;
+  border-radius: 20px;
+}
+
+#result_shower {
+  background-color: #fff;
+  border-radius: 15px;
+  width: 90%;
+  height: 85px;
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+#result_shower p {
+  position: absolute;
+  right: 10px;
+  top: calc( 50% - 30px);
+  color: #808080;
+}
+
+#calculator_btn_container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.calculator_btn {
+  width: 30%;
+  height: 45px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: solid 1px #000000;
+  background-color: #646b79;
+  font-size: 25px;
+  color: #ffffff;
+  -webkit-box-shadow: 2px 2px 6px #777777;
+          box-shadow: 2px 2px 6px #777777;
+  cursor: pointer;
+}
+
+.calculator_btn:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.calculate_btn {
+  width: 100%;
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1080px) {
+  #main_container {
+    background-image: url(../image/bg_1080x1920p.png);
+  }
+  #main_container_C {
+    background-image: url(../image/bg_1080x1920p_C.png);
+  }
+  #carbon_emission {
+    width: 60%;
+    top: 25%;
+  }
+  #main_title {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #main_container {
+    background-position: 50% 0%;
+  }
+  #main_container {
+    width: 100%;
+    background-size: 130% auto;
+    min-height: unset;
+  }
+  #main_container_C {
+    background-image: url(../image/bg_1080x1920p_C.png);
+  }
+  #carbon_container {
+    height: 100%;
+    max-height: 100%;
+  }
+  #main_title {
+    width: 65%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  #carbon_emission {
+    top: 30%;
+    width: unset;
+  }
+  #carbon_emission_box {
+    right: 100px;
+  }
+  #carbon_emission_calculator {
+    bottom: 20%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #main_container_C {
+    min-width: unset;
+    background-size: cover;
+  }
+  #main_title {
+    top: 0%;
+  }
+  #carbon_emission span {
+    font-size: 30px;
+  }
+  #co2_emission {
+    width: 300px;
+  }
+  #co2_emission span {
+    margin: unset;
+    font-size: 30px;
+  }
+  .carbon_emission_num {
+    font-size: 40px;
+    height: 50px;
+  }
+  #carbon_emission_box {
+    right: 70px;
+  }
+  #carbon_emission_calculator {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    bottom: 150px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #main_container_C {
+    overflow: auto;
+  }
+  #carbon_emission {
+    top: 250px;
+  }
+  #carbon_emission_box {
+    top: 50px;
+    right: 60px;
+  }
+  #carbon_features_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #calculator_container {
+    width: 100%;
+    border: none;
+  }
+  #carbon_emission_calculator {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    bottom: 0;
+  }
+  #carbon_container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main_container_C {
+    height: 100%;
+  }
+  #carbon_container {
+    max-height: 100%;
+    margin-top: 80%;
+  }
+  #main_title {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #carbon_emission {
+    position: relative;
+    right: unset;
+    margin-left: auto;
+    margin-right: auto;
+    top: 100px;
+  }
+  #carbon_emission_box {
+    top: 30px;
+    right: 35px;
+  }
+  #carbon_emission_box span {
+    font-size: 20px;
+  }
+  .carbon_emission_num {
+    font-size: 15px;
+    height: 25px;
+    margin-left: 2px;
+  }
+  #carbon_emission_calculator {
+    top: unset;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-height: 800px) and (max-height: 850px) {
+  #carbon_container {
+    max-height: 85%;
+  }
+  #carbon_emission_calculator {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #main_title {
+    position: relative;
+    min-height: unset;
+    height: 20%;
+    min-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    right: 0;
+  }
+  #carbon_emission {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100px;
+    top: 0;
+    right: 0;
+  }
+  #carbon_emission span {
+    font-size: 12px;
+  }
+  #carbon_emission_box {
+    right: 30px;
+    top: 30px;
+  }
+  .carbon_emission_num {
+    font-size: 12px;
+    height: 20px;
+    margin-left: 3px;
+  }
+  #carbon_emission_calculator {
+    position: relative;
+    min-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100px;
+    text-align: center;
+    right: 0;
+    bottom: 20px;
+  }
+  #result_shower {
+    margin-top: 20px;
+    display: inline-block;
+  }
+}
+/*# sourceMappingURL=carbon.css.map */
